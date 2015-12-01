@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201141613) do
+ActiveRecord::Schema.define(version: 20151201145458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20151201141613) do
 
   create_table "origins", force: true do |t|
     t.string   "name"
-    t.string   "country"
+    t.string   "country",    limit: 3
     t.integer  "elevation"
     t.datetime "created_at"
     t.datetime "updated_at"
